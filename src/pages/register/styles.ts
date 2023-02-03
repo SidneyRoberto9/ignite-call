@@ -9,11 +9,11 @@ export const Container = styled('main', {
 export const Header = styled('div', {
   padding: '0 $6',
 
-  [`${Heading}`]: {
+  [`> ${Heading}`]: {
     lineHeight: '$base',
   },
 
-  [`${Text}`]: {
+  [`> ${Text}`]: {
     color: '$gray200',
     marginBottom: '$6',
   },
