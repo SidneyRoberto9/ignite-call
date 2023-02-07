@@ -38,7 +38,7 @@ export function ConfirmStep({
   const username = String(router.query.username)
 
   const describedDate = dayjs(schedulingDate).format('DD[ de ]MMMM[ de ]YYYY')
-  const describedTime = dayjs(schedulingDate).format('HH:mmhh[h]')
+  const describedTime = dayjs(schedulingDate).format('HH:mm[h]')
 
   async function handleConfirmScheduling(data: ConfirmFormDate) {
     const { name, email, observations } = data
