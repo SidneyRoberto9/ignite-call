@@ -42,8 +42,11 @@ Para usar o Ignite Call, siga estas etapas:
 git clone https://github.com/SidneyRoberto9/ignite-call
 
 yarn ou npm i
+```
 
 Agora crie uma .env na raiz do projeto e preencha as seguintes chaves:
+
+```
 DATABASE_URL: com o endereço de conexão ao banco criado posteriormente
 
 GOOOGLE_CLIENT_ID: proveniente do Google Cloud
@@ -52,7 +55,12 @@ GOOOGLE_CLIENT_SECRET: proveniente do Google Cloud
 NEXTAUTH_SECRET: qualquer chave md5 aleatória
 NEXTAUTH_URL: o url da aplicação, normalmente sendo "http://localhost:3000"
 
+yarn dev ou npm dev
+```
+
 conecte os schemas do prisma com o banco utilizando:
+
+```
 npx prisma migrate dev (para o banco em docker local)
 npx prisma db push (para bancos com planetScale, Neon e outros)
 
