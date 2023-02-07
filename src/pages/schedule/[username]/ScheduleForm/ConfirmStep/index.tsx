@@ -43,7 +43,7 @@ export function ConfirmStep({
   async function handleConfirmScheduling(data: ConfirmFormDate) {
     const { name, email, observations } = data
 
-    await api.post(`/users/${username}/scheduling`, {
+    await api.post(`/users/${username}/schedule`, {
       name,
       email,
       observations,
@@ -68,7 +68,12 @@ export function ConfirmStep({
 
       <label>
         <Text size={'sm'}>Nome Completo</Text>
-        <TextInput placeholder="Seu nome" {...register('name')} />
+        <TextInput
+          placeholder="Seu nome"
+          {...register('name')}
+          autoComplete={'off'}
+          spellCheck={'false'}
+        />
         {!!errors.name && (
           <FormError size={'sm'}>{errors.name.message}</FormError>
         )}
@@ -79,6 +84,8 @@ export function ConfirmStep({
         <TextInput
           type={'email'}
           placeholder="johndoe@exemple.com"
+          autoComplete={'off'}
+          spellCheck={'false'}
           {...register('email')}
         />
         {!!errors.email && (
@@ -88,7 +95,11 @@ export function ConfirmStep({
 
       <label>
         <Text size={'sm'}>Observações</Text>
-        <TextArea {...register('observations')} />
+        <TextArea
+          {...register('observations')}
+          autoComplete={'off'}
+          spellCheck={'false'}
+        />
       </label>
 
       <FormActions>
